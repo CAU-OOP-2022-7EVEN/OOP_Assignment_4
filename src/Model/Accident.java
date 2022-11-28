@@ -8,4 +8,12 @@ public class Accident{
         this.date = date;
         this.content = content;
     }
+
+    public void setDate(String date){
+        this.date = date;
+    }
+
+    public void setContent(String content){
+        this.content = content;
+    }
 }
