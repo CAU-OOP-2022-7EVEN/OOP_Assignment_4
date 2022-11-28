@@ -18,4 +18,8 @@ public class Car{
         this.year = year;
         this.isAccident = isAccident;
     }
+
+    public void printCarInfo(){
+        System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d", name, manufacture, number, price, capacity, year);
+    }
 }
