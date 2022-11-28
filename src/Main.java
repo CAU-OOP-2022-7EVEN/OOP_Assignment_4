@@ -1,5 +1,8 @@
+import Model.Car;
+
 public class Main{
     public static void main(String[] args){
-        System.out.println("Hello world!");
+        Car testCar = new Car("Veloster N", "Hyundai", "123구1234", 2300, 5, 2019, false);
+        testCar.printCarInfo();
     }
 }
