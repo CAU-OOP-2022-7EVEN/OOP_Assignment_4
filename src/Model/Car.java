@@ -22,4 +22,32 @@ public class Car{
     public void printCarInfo(){
         System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d\nHas Accident History : %s\n", name, manufacture, number, price, capacity, year, this.isAccident ? "Y" : "N");
     }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setManufacture(String manufacture){
+        this.manufacture = manufacture;
+    }
+
+    public void setNumber(String number){
+        this.number = number;
+    }
+
+    public void setPrice(int price){
+        this.price = price;
+    }
+
+    public void setCapacity(int capacity){
+        this.capacity = capacity;
+    }
+
+    public void setYear(int year){
+        this.year = year;
+    }
+
+    public void setIsAccident(boolean isAccident){
+        this.isAccident = isAccident;
+    }
 }
