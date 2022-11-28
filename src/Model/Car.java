@@ -20,6 +20,6 @@ public class Car{
     }
 
     public void printCarInfo(){
-        System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d", name, manufacture, number, price, capacity, year);
+        System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d\nHas Accident History : %s\n", name, manufacture, number, price, capacity, year, this.isAccident ? "Y" : "N");
     }
 }
