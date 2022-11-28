@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.ArrayList;
+
 public class Car{
     private String name;
     private String manufacture;
@@ -8,6 +10,7 @@ public class Car{
     private int capacity;
     private int year;
     private boolean isAccident;
+    private ArrayList<Accident> accidents;
 
     public Car(String name, String manufacture, String number, int price, int capacity, int year, boolean isAccident){
         this.name = name;
