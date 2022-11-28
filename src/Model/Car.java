@@ -58,6 +58,14 @@ public class Car{
         return this.accidents;
     }
 
+    public void addAccident(Accident accident){
+        this.accidents.add(accident);
+    }
+
+    public void removeAccident(int idx){
+        this.accidents.remove(idx);
+    }
+
     public void setName(String name){
         this.name = name;
     }
