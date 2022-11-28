@@ -24,31 +24,31 @@ public class Car{
     }
 
     public String getName(){
-        return name;
+        return this.name;
     }
 
     public String getManufacture(){
-        return manufacture;
+        return this.manufacture;
     }
 
     public String getNumber(){
-        return number;
+        return this.number;
     }
 
     public int getPrice(){
-        return price;
+        return this.price;
     }
 
     public int getCapacity(){
-        return capacity;
+        return this.capacity;
     }
 
     public int getYear(){
-        return year;
+        return this.year;
     }
 
     public boolean getIsAccident(){
-        return isAccident;
+        return this.isAccident;
     }
 
     public void setName(String name){
