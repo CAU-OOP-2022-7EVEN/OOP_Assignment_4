@@ -23,6 +23,34 @@ public class Car{
         System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d\nHas Accident History : %s\n", name, manufacture, number, price, capacity, year, this.isAccident ? "Y" : "N");
     }
 
+    public String getName(){
+        return name;
+    }
+
+    public String getManufacture(){
+        return manufacture;
+    }
+
+    public String getNumber(){
+        return number;
+    }
+
+    public int getPrice(){
+        return price;
+    }
+
+    public int getCapacity(){
+        return capacity;
+    }
+
+    public int getYear(){
+        return year;
+    }
+
+    public boolean getIsAccident(){
+        return isAccident;
+    }
+
     public void setName(String name){
         this.name = name;
     }
