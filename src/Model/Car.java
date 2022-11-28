@@ -10,7 +10,7 @@ public class Car{
     private int capacity;
     private int year;
     private boolean isAccident;
-    private ArrayList<Accident> accidents;
+    private final ArrayList<Accident> accidents = new ArrayList<>();
 
     public Car(String name, String manufacture, String number, int price, int capacity, int year, boolean isAccident){
         this.name = name;
@@ -24,6 +24,11 @@ public class Car{
 
     public void printCarInfo(){
         System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d\nHas Accident History : %s\n", name, manufacture, number, price, capacity, year, this.isAccident ? "Y" : "N");
+
+        System.out.println("<Accident Info>");
+        for(Accident accident : accidents){
+            System.out.printf("Accident Date : %s\nAccident Content : %s\n", accident.getDate(), accident.getContent());
+        }
     }
 
     public String getName(){
