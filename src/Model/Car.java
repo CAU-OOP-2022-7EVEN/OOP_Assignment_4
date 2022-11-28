@@ -54,6 +54,10 @@ public class Car{
         return this.isAccident;
     }
 
+    public ArrayList<Accident> getAccidents(){
+        return this.accidents;
+    }
+
     public void setName(String name){
         this.name = name;
     }
