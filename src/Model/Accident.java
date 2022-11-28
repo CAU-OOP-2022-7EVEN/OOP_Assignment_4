@@ -9,6 +9,14 @@ public class Accident{
         this.content = content;
     }
 
+    public String getDate(){
+        return this.date;
+    }
+
+    public String getContent(){
+        return this.content;
+    }
+
     public void setDate(String date){
         this.date = date;
     }
