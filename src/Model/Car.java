@@ -41,14 +41,18 @@ public class Car{
     public void printCarInfo(){
         System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d\nAccident History : %s\nTune History : %s\n", name, manufacture, number, price, capacity, year, this.isAccident ? "Y" : "N", this.isTuned ? "Y" : "N");
 
-        System.out.println("<Accident Info>");
-        for(Accident accident : accidents){
-            System.out.printf("Accident Date : %s\nAccident Content : %s\n", accident.getDate(), accident.getContent());
+        if(isAccident) {
+            System.out.println("<Accident Info>");
+            for (Accident accident : accidents) {
+                System.out.printf("Accident Date : %s\nAccident Content : %s\n", accident.getDate(), accident.getContent());
+            }
         }
 
-        System.out.println("<Tune Info>");
-        for(Tune tune : tunes){
-            System.out.printf("Tune Date : %s\nTune Content : %s\n", tune.getDate(), tune.getContent());
+        if(isTuned) {
+            System.out.println("<Tune Info>");
+            for (Tune tune : tunes) {
+                System.out.printf("Tune Date : %s\nTune Content : %s\n", tune.getDate(), tune.getContent());
+            }
         }
     }
 
