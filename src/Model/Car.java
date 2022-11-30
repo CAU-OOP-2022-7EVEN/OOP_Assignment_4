@@ -10,6 +10,7 @@ public class Car{
     private int capacity;
     private int year;
     private boolean isAccident;
+    private boolean isTuned;
     private final ArrayList<Accident> accidents = new ArrayList<>();
 
     public Car(String name, String manufacture, String number, int price, int capacity, int year, boolean isAccident){
@@ -59,6 +60,10 @@ public class Car{
         return this.isAccident;
     }
 
+    public boolean getIsTuned(){
+        return this.isTuned;
+    }
+
     public ArrayList<Accident> getAccidents(){
         return this.accidents;
     }
@@ -97,5 +102,9 @@ public class Car{
 
     public void setIsAccident(boolean isAccident){
         this.isAccident = isAccident;
+    }
+
+    public void setIsTuned(boolean isTuned){
+        this.isTuned = isTuned;
     }
 }
