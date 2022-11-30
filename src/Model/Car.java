@@ -12,6 +12,7 @@ public class Car{
     private boolean isAccident;
     private boolean isTuned;
     private final ArrayList<Accident> accidents = new ArrayList<>();
+    private final ArrayList<Tune> tunes = new ArrayList<>();
 
     public Car(String name, String manufacture, String number, int price, int capacity, int year, boolean isAccident){
         this.name = name;
@@ -68,12 +69,24 @@ public class Car{
         return this.accidents;
     }
 
+    public ArrayList<Tune> getTunes(){
+        return this.tunes;
+    }
+
     public void addAccident(Accident accident){
         this.accidents.add(accident);
     }
 
     public void removeAccident(int idx){
         this.accidents.remove(idx);
+    }
+    
+    public void addTune(Tune tune){
+        this.tunes.add(tune);
+    }
+
+    public void removeTune(int idx){
+        this.tunes.remove(idx);
     }
 
     public void setName(String name){
