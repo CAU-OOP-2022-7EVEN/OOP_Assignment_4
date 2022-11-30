@@ -31,6 +31,11 @@ public class Car{
         for(Accident accident : accidents){
             System.out.printf("Accident Date : %s\nAccident Content : %s\n", accident.getDate(), accident.getContent());
         }
+
+        System.out.println("<Tune Info>");
+        for(Tune tune : tunes){
+            System.out.printf("Tune Date : %s\nTune Content : %s\n", tune.getDate(), tune.getContent());
+        }
     }
 
     public String getName(){
@@ -80,7 +85,7 @@ public class Car{
     public void removeAccident(int idx){
         this.accidents.remove(idx);
     }
-    
+
     public void addTune(Tune tune){
         this.tunes.add(tune);
     }
