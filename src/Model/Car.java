@@ -39,7 +39,7 @@ public class Car{
     }
 
     public void printCarInfo(){
-        System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d\nHas Accident History : %s\n", name, manufacture, number, price, capacity, year, this.isAccident ? "Y" : "N");
+        System.out.printf("Name : %s\nManufacture : %s\nNumber : %s\nPrice : %d\nCapacity : %d\nYear : %d\nAccident History : %s\nTune History : %s\n", name, manufacture, number, price, capacity, year, this.isAccident ? "Y" : "N", this.isTuned ? "Y" : "N");
 
         System.out.println("<Accident Info>");
         for(Accident accident : accidents){
@@ -84,8 +84,8 @@ public class Car{
         return this.year;
     }
 
-    public Fuel getFuel(){
-        return this.fuel;
+    public String getFuel(){
+        return this.fuel.toString();
     }
 
     public boolean getIsAccident(){
@@ -152,8 +152,8 @@ public class Car{
         this.year = year;
     }
 
-    public void setFuel(Fuel fuel){
-        this.fuel = fuel;
+    public void setFuel(String fuel){
+        this.fuel = Fuel.valueOf(fuel);
     }
 
     public void setIsAccident(boolean isAccident){
