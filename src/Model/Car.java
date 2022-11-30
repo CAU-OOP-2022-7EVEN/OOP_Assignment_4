@@ -3,6 +3,13 @@ package Model;
 import java.util.ArrayList;
 
 public class Car{
+    private enum Fuel{
+        Diesel,
+        Electric,
+        Gasoline,
+        LPG
+    }
+
     private String name;
     private String manufacture;
     private String number;
@@ -11,6 +18,7 @@ public class Car{
     private int capacity;
     private int distanceDriven;
     private int year;
+    private Fuel fuel;
     private boolean isAccident;
     private boolean isTuned;
     private final ArrayList<Accident> accidents = new ArrayList<>();
@@ -70,6 +78,10 @@ public class Car{
 
     public int getYear(){
         return this.year;
+    }
+
+    public Fuel getFuel(){
+        return this.fuel;
     }
 
     public boolean getIsAccident(){
@@ -134,6 +146,10 @@ public class Car{
 
     public void setYear(int year){
         this.year = year;
+    }
+
+    public void setFuel(Fuel fuel){
+        this.fuel = fuel;
     }
 
     public void setIsAccident(boolean isAccident){
