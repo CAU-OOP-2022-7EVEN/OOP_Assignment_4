@@ -9,6 +9,7 @@ public class Car{
     private String color;
     private int price;
     private int capacity;
+    private int distanceDriven;
     private int year;
     private boolean isAccident;
     private boolean isTuned;
@@ -61,6 +62,10 @@ public class Car{
 
     public int getCapacity(){
         return this.capacity;
+    }
+
+    public int getDistanceDriven(){
+        return this.distanceDriven;
     }
 
     public int getYear(){
@@ -121,6 +126,10 @@ public class Car{
 
     public void setCapacity(int capacity){
         this.capacity = capacity;
+    }
+
+    public void setDistanceDriven(int distanceDriven){
+        this.distanceDriven = distanceDriven;
     }
 
     public void setYear(int year){
