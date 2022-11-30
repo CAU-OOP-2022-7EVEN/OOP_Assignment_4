@@ -24,14 +24,18 @@ public class Car{
     private final ArrayList<Accident> accidents = new ArrayList<>();
     private final ArrayList<Tune> tunes = new ArrayList<>();
 
-    public Car(String name, String manufacture, String number, int price, int capacity, int year, boolean isAccident){
+    public Car(String name, String manufacture, String number, String color, int price, int capacity, int distanceDriven, int year, String fuel, boolean isAccident, boolean isTuned){
         this.name = name;
         this.manufacture = manufacture;
         this.number = number;
+        this.color = color;
         this.price = price;
         this.capacity = capacity;
+        this.distanceDriven = distanceDriven;
         this.year = year;
+        this.fuel = Fuel.valueOf(fuel);
         this.isAccident = isAccident;
+        this.isTuned = isTuned;
     }
 
     public void printCarInfo(){
