@@ -6,6 +6,7 @@ public class Car{
     private String name;
     private String manufacture;
     private String number;
+    private String color;
     private int price;
     private int capacity;
     private int year;
@@ -48,6 +49,10 @@ public class Car{
 
     public String getNumber(){
         return this.number;
+    }
+
+    public String getColor(){
+        return this.color;
     }
 
     public int getPrice(){
@@ -104,6 +109,10 @@ public class Car{
 
     public void setNumber(String number){
         this.number = number;
+    }
+
+    public void setColor(String color){
+        this.color = color;
     }
 
     public void setPrice(int price){
