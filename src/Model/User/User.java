@@ -1,4 +1,6 @@
-package Model;
+package Model.User;
+import Model.Car;
+
 import java.util.ArrayList;
 
 class User {
