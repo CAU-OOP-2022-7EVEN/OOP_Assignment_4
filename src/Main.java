@@ -1,6 +1,9 @@
 import Model.Accident;
 import Model.Car;
+import Model.Seller;
 import Model.Tune;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main{
