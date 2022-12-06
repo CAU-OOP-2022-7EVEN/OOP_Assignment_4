@@ -1,9 +1,8 @@
-package Model.User;
-import Model.Car;
+package Model;
 
 import java.util.ArrayList;
 
-public class User {
+public class User{
     private String userName;
     private boolean isSeller;
     protected ArrayList<Car> Cars = new ArrayList<>();
