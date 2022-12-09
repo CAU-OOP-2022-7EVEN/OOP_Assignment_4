@@ -10,17 +10,23 @@ public class Car{
         LPG
     }
 
+    private enum Type{
+        Car,
+        Truck,
+        Bus
+    }
+
     private String name;
     private String manufacture;
     private String number;
     private String color;
     private String carImage;
-    private int type; //0: All, 1: 승용, 2: 화물, 3: 버스
     private int price;
     private int capacity;
     private int distanceDriven;
     private int year;
     private Fuel fuel;
+    private Type type;
     private boolean isAccident;
     private boolean isTuned;
     private final ArrayList<Accident> accidents = new ArrayList<>();
