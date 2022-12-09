@@ -16,7 +16,7 @@ public class User{
     public boolean addCar(Car newCar){
         if(isSeller){
             for (Car car : Cars) { //이미 등록된 차량인지 확인
-                if (car.getNumber().equals(car.getNumber())) {
+                if (car.getNumber().equals(newCar.getNumber())) {
                     System.out.println("이미 등록한 차량입니다.");
                     return false; //이미 등록한 차량일 경우 False
                 }
