@@ -3,6 +3,7 @@ package Model;
 import java.util.ArrayList;
 
 public class Car{
+
     private enum Fuel{
         All,
         Diesel,
