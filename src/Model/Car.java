@@ -32,7 +32,7 @@ public class Car{
     private final ArrayList<Accident> accidents = new ArrayList<>();
     private final ArrayList<Tune> tunes = new ArrayList<>();
 
-    public Car(String name, String manufacture, String number, String color, int type, int price, int capacity, int distanceDriven, int year, String fuel, boolean isAccident, boolean isTuned){
+    public Car(String name, String manufacture, String number, String color, String type, int price, int capacity, int distanceDriven, int year, String fuel, boolean isAccident, boolean isTuned){
         this.name = name;
         this.manufacture = manufacture;
         this.number = number;
@@ -78,7 +78,7 @@ public class Car{
     }
 
     public String getType(){
-        return this.type;
+        return this.type.toString();
     }
     public String getColor(){
         return this.color;
@@ -152,8 +152,8 @@ public class Car{
         this.number = number;
     }
 
-    public void setType(int type){
-        this.type = type;
+    public void setType(String type){
+        this.type = Type.valueOf(type);
     }
 
     public void setColor(String color){
