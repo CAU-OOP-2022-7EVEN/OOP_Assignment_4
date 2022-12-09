@@ -23,7 +23,7 @@ class Find {
                 }
 
             else {
-                if (fuel == all) {
+                if (fuel == All) {
                     if (car.getType().equals(type) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear && car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
                         resultCarList.add(car);
                     }
