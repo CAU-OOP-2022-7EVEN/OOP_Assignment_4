@@ -10,8 +10,8 @@ class Find {
         ArrayList<Car> resultCarList = new ArrayList<>();
 
         for (Car car : Car.cars ){
-            if (type == 0) {
-                if (fuel == 0) {
+            if (type == All) {
+                if (fuel == All) {
                     if (car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear &&  car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
                         resultCarList.add(car);
                     }
@@ -23,7 +23,7 @@ class Find {
                 }
 
             else {
-                if (fuel == 0) {
+                if (fuel == all) {
                     if (car.getType().equals(type) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear && car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
                         resultCarList.add(car);
                     }

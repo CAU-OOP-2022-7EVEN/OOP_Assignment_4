@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Car{
     private enum Fuel{
+        All,
         Diesel,
         Electric,
         Gasoline,
@@ -11,6 +12,7 @@ public class Car{
     }
 
     private enum Type{
+        All,
         Car,
         Truck,
         Bus
