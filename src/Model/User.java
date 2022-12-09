@@ -16,7 +16,7 @@ public class User{
     public boolean addCar(Car newCar){
         if(isSeller){
             for (Car car : Cars) { //이미 등록된 차량인지 확인
-                if (car == newCar) {
+                if (car.getNumber().equals(car.getNumber())) {
                     System.out.println("이미 등록한 차량입니다.");
                     return false; //이미 등록한 차량일 경우 False
                 }
@@ -39,14 +39,14 @@ public class User{
     public boolean buyCar(Car targetCar, User seller){ //정상적으로 구매가 이루어졌는지 반환
         if(!isSeller){
             for (Car car : Cars) {
-                if (car == targetCar) {
+                if (car.getNumber().equals(targetCar.getNumber())) {
                     System.out.println("이미 구매한 차량입니다");
                     return false; //이미 구매한 차량이면 false
                 }
             }
             try {
                 for(int i= 0 ;i < seller.getCarList().size(); i++) {
-                    if (seller.getCarList().get(i) == targetCar) {
+                    if (seller.getCarList().get(i).getNumber().equals(targetCar.getNumber())) {
                         Cars.add(targetCar);
                         seller.getCarList().remove(targetCar);
                         System.out.println("성공적으로 구매했습니다.");
