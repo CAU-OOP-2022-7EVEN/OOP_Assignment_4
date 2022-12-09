@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class User{
     private String userName;
     private boolean isSeller;
-    protected ArrayList<Car> Cars = new ArrayList<>();
+    protected static ArrayList<Car> Cars = new ArrayList<>();
 
     public User(String name, boolean isSeller){
         this.userName = name;
@@ -65,8 +65,8 @@ public class User{
         return false; //기본값은 false
     }
 
-    public ArrayList<Car> getCarList(){
-        return this.Cars;
+    public static ArrayList<Car> getCarList(){
+        return Cars;
     }
 
     public boolean getIsSeller(){

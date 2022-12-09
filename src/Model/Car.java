@@ -3,11 +3,20 @@ package Model;
 import java.util.ArrayList;
 
 public class Car{
+
     private enum Fuel{
+        All,
         Diesel,
         Electric,
         Gasoline,
         LPG
+    }
+
+    private enum Type{
+        All,
+        Car,
+        Truck,
+        Bus
     }
 
     private String name;
@@ -20,16 +29,18 @@ public class Car{
     private int distanceDriven;
     private int year;
     private Fuel fuel;
+    private Type type;
     private boolean isAccident;
     private boolean isTuned;
     private final ArrayList<Accident> accidents = new ArrayList<>();
     private final ArrayList<Tune> tunes = new ArrayList<>();
 
-    public Car(String name, String manufacture, String number, String color, int price, int capacity, int distanceDriven, int year, String fuel, boolean isAccident, boolean isTuned){
+    public Car(String name, String manufacture, String number, String color, String type, int price, int capacity, int distanceDriven, int year, String fuel, boolean isAccident, boolean isTuned){
         this.name = name;
         this.manufacture = manufacture;
         this.number = number;
         this.color = color;
+        this.type = Type.valueOf(type);
         this.price = price;
         this.capacity = capacity;
         this.distanceDriven = distanceDriven;
@@ -69,6 +80,9 @@ public class Car{
         return this.number;
     }
 
+    public String getType(){
+        return this.type.toString();
+    }
     public String getColor(){
         return this.color;
     }
@@ -139,6 +153,10 @@ public class Car{
 
     public void setNumber(String number){
         this.number = number;
+    }
+
+    public void setType(String type){
+        this.type = Type.valueOf(type);
     }
 
     public void setColor(String color){
