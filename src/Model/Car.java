@@ -15,6 +15,7 @@ public class Car{
     private String number;
     private String color;
     private String carImage;
+    private int type; //0: All, 1: 승용, 2: 화물, 3: 버스
     private int price;
     private int capacity;
     private int distanceDriven;
@@ -25,11 +26,12 @@ public class Car{
     private final ArrayList<Accident> accidents = new ArrayList<>();
     private final ArrayList<Tune> tunes = new ArrayList<>();
 
-    public Car(String name, String manufacture, String number, String color, int price, int capacity, int distanceDriven, int year, String fuel, boolean isAccident, boolean isTuned){
+    public Car(String name, String manufacture, String number, String color, int type, int price, int capacity, int distanceDriven, int year, String fuel, boolean isAccident, boolean isTuned){
         this.name = name;
         this.manufacture = manufacture;
         this.number = number;
         this.color = color;
+        this.type = type;
         this.price = price;
         this.capacity = capacity;
         this.distanceDriven = distanceDriven;
@@ -69,6 +71,9 @@ public class Car{
         return this.number;
     }
 
+    public String getType(){
+        return this.type;
+    }
     public String getColor(){
         return this.color;
     }
@@ -139,6 +144,10 @@ public class Car{
 
     public void setNumber(String number){
         this.number = number;
+    }
+
+    public void setType(int type){
+        this.type = type;
     }
 
     public void setColor(String color){

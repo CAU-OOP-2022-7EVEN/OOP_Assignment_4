@@ -6,92 +6,54 @@ import java.util.Scanner;
 
 class Find {
 
-    Iterator<Cars> iterator = Cars.iterator();
 
-    public void findCar(String fuel) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel)) {
-                System.out.println(car.getNumber());
+    public static ArrayList<Car> findCar = new ArrayList<>();
+
+    public void findCar(int type, int maxPrice, int minPrice, int maxDistanceDriven, int minDistanceDriven, int maxYear, int minYear, String fuel, boolean isAccident, boolean isTuned) {
+
+        for (Car car : Car.cars /* 여기 맞나?! */){
+
+            if (type == 0) {
+                if (fuel == null) {
+                    if (car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear &&  car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
+                        findCar.add(car);
+                    }
+                }
+                else {
+                    if (car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear && car.getFuel().equals(fuel) && car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
+                        findCar.add(car);
+                    }
+                }
+
+            else {
+                if (fuel == null) {
+                    if (car.getType().equals(type) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear && car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
+                        findCar.add(car);
+                    }
+                }
+
+                else {
+                    if (car.getType().equals(type) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear && car.getFuel().equals(fuel) && car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
+                        findCar.add(car);
+                    }
+                }
+
+                }
             }
         }
     }
-
-    public void findCar(String fuel, String manufacture) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture)) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
-
-    public void findCar(String fuel, String manufacture, String name) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture) && car.getCarName().equals(name)) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
-
-    public void findCar(String fuel, String manufacture, String name, int maxPrice, int minPrice) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture) && car.getCarName().equals(name) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
-
-    public void findCar(String fuel, String manufacture, String name, int maxPrice, int minPrice, int maxDistance, int minDistance) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture) && car.getCarName().equals(name) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistance && car.getDistanceDriven() >= minDistance) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
-
-    public void findCar(String fuel, String manufacture, String name, int maxPrice, int minPrice, int maxDistance, int minDistance, int maxYear, int minYear) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture) && car.getCarName().equals(name) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistance && car.getDistanceDriven() >= minDistance && car.getYear() <= maxYear && car.getYear() >= minYear) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
-
-    public void findCar(String fuel, String manufacture, String name, int maxPrice, int minPrice, int maxDistance, int minDistance, int maxYear, int minYear, String color) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture) && car.getCarName().equals(name) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistance && car.getDistanceDriven() >= minDistance && car.getYear() <= maxYear && car.getYear() >= minYear && car.getColor().equals(color)) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
-
-    public void findCar(String fuel, String manufacture, String name, int maxPrice, int minPrice, int maxDistance, int minDistance, int maxYear, int minYear, String color, boolean isAccident) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture) && car.getCarName().equals(name) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistance && car.getDistanceDriven() >= minDistance && car.getYear() <= maxYear && car.getYear() >= minYear && car.getColor().equals(color) && car.getIsAccident() == isAccident) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
-
-    public void findCar(String fuel, String manufacture, String name, int maxPrice, int minPrice, int maxDistance, int minDistance, int maxYear, int minYear, String color, boolean isAccident, boolean isTuned) {
-        while (iterator.hasNext()) {
-            Car car = iterator.next();
-            if (car.getFuel().equals(fuel) && car.getManufacture().equals(manufacture) && car.getCarName().equals(name) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistance && car.getDistanceDriven() >= minDistance && car.getYear() <= maxYear && car.getYear() >= minYear && car.getColor().equals(color) && car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
-                System.out.println(car.getNumber());
-            }
-        }
-    }
+}
 
 
-    /*
 
+
+
+
+
+
+
+/*
+    Iterator<Car> iterator = Cars.iterator();
     public void optPriceRange(int min, max) {
         //iterator를 이용하여 Cars의 모든 Car 객체를 순회하며, 해당 Car 객체의 price가 min과 max 사이에 있는지 확인
 
@@ -197,7 +159,4 @@ class Find {
             }
         }
     }
-
 */
-
-}
