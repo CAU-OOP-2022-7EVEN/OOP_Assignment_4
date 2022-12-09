@@ -11,10 +11,10 @@ class Find {
 
     public void findCar(int type, int maxPrice, int minPrice, int maxDistanceDriven, int minDistanceDriven, int maxYear, int minYear, String fuel, boolean isAccident, boolean isTuned) {
 
-        for (Car car : Car.cars /* 여기 맞나?! */){
+        for (Car car : Car.cars ){
 
             if (type == 0) {
-                if (fuel == null) {
+                if (fuel == 0) {
                     if (car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear &&  car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
                         findCar.add(car);
                     }
@@ -26,7 +26,7 @@ class Find {
                 }
 
             else {
-                if (fuel == null) {
+                if (fuel == 0) {
                     if (car.getType().equals(type) && car.getPrice() <= maxPrice && car.getPrice() >= minPrice && car.getDistanceDriven() <= maxDistanceDriven && car.getDistanceDriven() >= minDistanceDriven && car.getYear() <= maxYear && car.getYear() >= minYear && car.getIsAccident() == isAccident && car.getIsTuned() == isTuned) {
                         findCar.add(car);
                     }
