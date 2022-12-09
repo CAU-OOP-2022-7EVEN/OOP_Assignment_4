@@ -39,7 +39,7 @@ public class Car{
         this.manufacture = manufacture;
         this.number = number;
         this.color = color;
-        this.type = type;
+        this.type = Type.valueOf(type);
         this.price = price;
         this.capacity = capacity;
         this.distanceDriven = distanceDriven;
